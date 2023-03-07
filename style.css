@@ -1,14 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap");
+h3, p {
+  color: #f6e7c6;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Red Hat Display", sans-serif;
-}
-
-body {
-  min-height: 200vh;
 }
 
 #background {
@@ -17,9 +17,8 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  background-image: url(./images/green-slate.jpg);
+  background-image: url(./images/ffflux.svg);
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 video {
@@ -33,10 +32,8 @@ video {
 }
 
 .video-wrapper {
-  width: 100%;
   height: 100vh;
   position: relative;
-  overflow: hidden;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -57,7 +54,7 @@ video {
   width: 70%;
 }
 
-.img-wrapper {
+.wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,21 +62,62 @@ video {
   position: relative;
   gap: 1rem;
 }
-.img-wrapper h2, .img-wrapper h3 {
+.wrapper .heading-3 {
   color: #f6e7c6;
   letter-spacing: 2px;
 }
-.img-wrapper h2 {
-  font-size: 4rem;
+.wrapper .heading-3.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
 }
-.img-wrapper img {
+.wrapper .image {
   position: relative;
   width: 40%;
 }
+.wrapper .records-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin-bottom: 6rem;
+}
+.wrapper .records-container .heading-3 {
+  font-size: 1.5rem;
+}
+.wrapper .records-container .album:first-of-type {
+  margin-bottom: 4rem;
+}
+.wrapper .records-container .image {
+  margin-bottom: 1rem;
+  width: 100%;
+}
 @media (max-width: 900px) {
-  .img-wrapper img {
-    width: 76%;
+  .wrapper .records-container {
+    width: 90%;
   }
+  .wrapper .image {
+    width: 90%;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.scrolled {
+  opacity: 0;
+  filter: blur(15px);
+  transform: translateY(150%);
+  transition: all 1s;
+}
+
+.scrolled.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+  transition: all 1s;
 }
 
 .buttons {
@@ -89,10 +127,11 @@ video {
   justify-content: space-between;
   align-items: center;
   width: 40%;
+  margin: 3rem 0 3rem 0;
 }
 .buttons button {
   padding: 0.5rem 0;
-  border: 2px solid #ff992c;
+  border: 2px solid #f6e7c6;
   background: none;
   color: #f6e7c6;
   font-size: 18px;
@@ -112,10 +151,13 @@ video {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 76%;
+    width: 90%;
   }
-  button {
+  .button-primary {
     min-width: 100%;
+  }
+  video {
+    display: none;
   }
 }
 .socials {
@@ -124,16 +166,96 @@ video {
   justify-content: center;
   align-items: center;
   position: relative;
-  gap: 1rem;
   width: 100%;
   color: #f6e7c6;
   font-size: 2rem;
   margin-top: 2rem;
   padding: 1rem;
 }
-.socials i:hover {
+.socials .fa-brands {
+  display: grid;
+  place-items: center;
+  width: 1.5em;
+  height: 1.5em;
   cursor: pointer;
+  filter: blur(5px);
+  opacity: 0;
+  transition: 1s;
+  transform: translateX(-100%);
+}
+.socials .fa-brands.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.socials .fa-brands:hover {
+  transition: ease-in-out 0s;
+  transition-delay: 0ms;
   color: #ff992c;
+}
+
+.tour-dates {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(246, 231, 198, 0.1607843137);
+}
+@media (max-width: 900px) {
+  .tour-dates {
+    width: 90%;
+    padding: 0;
+    gap: 1rem;
+  }
+}
+.tour-dates h3 {
+  margin: 0 auto;
+}
+.tour-dates .date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.tour-dates .heading {
+  margin-bottom: 4rem;
+}
+.tour-dates .button-secondary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.tour-dates .tour-small-h {
+  font-size: 1.5rem;
+}
+.tour-dates .acts {
+  margin-bottom: 0;
+}
+@media (max-width: 900px) {
+  .tour-dates .acts {
+    width: 70%;
+  }
+}
+.tour-dates button {
+  border: none;
+  color: #f6e7c6;
+  background: none;
+  font-size: 0.8rem;
+  padding: 0.2em 0.8em;
+  border: 1px solid #f6e7c6;
+}
+.tour-dates button:hover {
+  background: url(./images/leon_gloomy.jpeg);
+}
+
+.past-ask {
+  margin-bottom: 6rem;
+  text-decoration: none;
+  text-decoration: underline;
+  color: #f6e7c6;
+  cursor: pointer;
 }
 
 .youtube {
@@ -159,8 +281,26 @@ footer {
   bottom: 0;
 }
 
-.carousel-inner {
-  margin: 0 auto;
-  height: 400px;
-  width: 50%;
+.fa-brands:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.fa-brands:nth-child(3) {
+  transition-delay: 400ms;
+}
+
+.fa-brands:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.fa-brands:nth-child(5) {
+  transition-delay: 800ms;
+}
+
+.fa-brands:nth-child(6) {
+  transition-delay: 1000ms;
+}
+
+.tour-dates {
+  transition-delay: 5;
 }/*# sourceMappingURL=style.css.map */
