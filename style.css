@@ -129,6 +129,11 @@ a {
   width: 40%;
   margin: 3rem 0 3rem 0;
 }
+@media (max-width: 900px) {
+  .buttons {
+    margin: 0;
+  }
+}
 .buttons button {
   padding: 0.5rem 0;
   border: 2px solid #f6e7c6;
@@ -181,7 +186,7 @@ a {
   filter: blur(5px);
   opacity: 0;
   transition: 1s;
-  transform: translateX(-100%);
+  transform: translateX(-80%);
 }
 .socials .fa-brands.show {
   opacity: 1;
