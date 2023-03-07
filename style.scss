@@ -136,6 +136,9 @@ a {
   @include flex(row, space-between, center);
   width: 40%;
   margin: 3rem 0 3rem 0;
+  @include for-mobile {
+    margin: 0;
+  }
   button {
     padding: .5rem 0;
     border: 2px solid $cream-color;
@@ -183,7 +186,7 @@ a {
     filter: blur(5px);
     opacity: 0;
     transition: 1s;
-    transform: translateX(-100%);
+    transform: translateX(-80%);
   }
   .fa-brands.show {
     opacity: 1;
