@@ -47,10 +47,8 @@ video {
 }
 
 .video-wrapper {
-  // width: 100%;
   height: 100vh;
   position: relative;
-  // overflow: hidden;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -62,9 +60,6 @@ video {
   color: #f6e7c6;
   text-shadow: 1px 1px 8px #00000093;
   letter-spacing: 2rem;
-  h1 {
-    font-size: 10rem;
-  }
   img {
     height: 70%;
     width: 70%;
@@ -88,18 +83,24 @@ video {
     position: relative;
     width: 40%;
   }
+  .heading {
+    margin-top: 6rem;
+  }
   .records-container {
     @include flex(column, center, center);
     width: 40%;
-    margin-bottom: 6rem;
+    // margin-bottom: 6rem;
+    text-align: center;
     .heading-3 {
       font-size: 1.5rem;
     }
     .album:first-of-type {
       margin-bottom: 4rem;
     }
+    .album {
+      margin-top: 1rem;
+    }
     .image {
-      margin-bottom: 1rem;
       width: 100%;
     }
   }
@@ -139,7 +140,7 @@ a {
   @include for-mobile {
     margin: 0;
   }
-  button {
+  a {
     padding: .5rem 0;
     border: 2px solid $cream-color;
     background: none;
@@ -149,8 +150,9 @@ a {
     width: 45%;
     cursor: pointer;
     letter-spacing: 2px;
+    text-align: center;
   }
-  button:hover {
+  a:hover {
     background: url(./images/leon_gloomy.jpeg);
   }
 }
@@ -167,6 +169,13 @@ a {
   video {
     display: none;
   }
+}
+
+a,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: $cream-color;
 }
 
 .socials {
@@ -233,7 +242,7 @@ a {
       width: 70%;
     }
   }
-  button {
+  a {
     border: none;
     color: $cream-color;
     background: none;

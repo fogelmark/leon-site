@@ -46,9 +46,6 @@ video {
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5764705882);
   letter-spacing: 2rem;
 }
-.header h1 {
-  font-size: 10rem;
-}
 .header img {
   height: 70%;
   width: 70%;
@@ -75,13 +72,16 @@ video {
   position: relative;
   width: 40%;
 }
+.wrapper .heading {
+  margin-top: 6rem;
+}
 .wrapper .records-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 40%;
-  margin-bottom: 6rem;
+  text-align: center;
 }
 .wrapper .records-container .heading-3 {
   font-size: 1.5rem;
@@ -89,8 +89,10 @@ video {
 .wrapper .records-container .album:first-of-type {
   margin-bottom: 4rem;
 }
+.wrapper .records-container .album {
+  margin-top: 1rem;
+}
 .wrapper .records-container .image {
-  margin-bottom: 1rem;
   width: 100%;
 }
 @media (max-width: 900px) {
@@ -134,7 +136,7 @@ a {
     margin: 0;
   }
 }
-.buttons button {
+.buttons a {
   padding: 0.5rem 0;
   border: 2px solid #f6e7c6;
   background: none;
@@ -144,8 +146,9 @@ a {
   width: 45%;
   cursor: pointer;
   letter-spacing: 2px;
+  text-align: center;
 }
-.buttons button:hover {
+.buttons a:hover {
   background: url(./images/leon_gloomy.jpeg);
 }
 
@@ -165,6 +168,13 @@ a {
     display: none;
   }
 }
+a,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: #f6e7c6;
+}
+
 .socials {
   display: flex;
   flex-direction: row;
@@ -243,7 +253,7 @@ a {
     width: 70%;
   }
 }
-.tour-dates button {
+.tour-dates a {
   border: none;
   color: #f6e7c6;
   background: none;
@@ -251,7 +261,7 @@ a {
   padding: 0.2em 0.8em;
   border: 1px solid #f6e7c6;
 }
-.tour-dates button:hover {
+.tour-dates a:hover {
   background: url(./images/leon_gloomy.jpeg);
 }
 
