@@ -73,7 +73,7 @@ video {
   width: 40%;
 }
 .wrapper .heading {
-  margin-top: 6rem;
+  margin-top: 1rem;
 }
 .wrapper .records-container {
   display: flex;
@@ -82,9 +82,6 @@ video {
   align-items: center;
   width: 40%;
   text-align: center;
-}
-.wrapper .records-container .heading-3 {
-  font-size: 1.5rem;
 }
 .wrapper .records-container .album:first-of-type {
   margin-bottom: 4rem;

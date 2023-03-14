@@ -84,16 +84,16 @@ video {
     width: 40%;
   }
   .heading {
-    margin-top: 6rem;
+    margin-top: 1rem;
   }
   .records-container {
     @include flex(column, center, center);
     width: 40%;
     // margin-bottom: 6rem;
     text-align: center;
-    .heading-3 {
-      font-size: 1.5rem;
-    }
+    // .heading-3 {
+    //   font-size: 1rem;
+    // }
     .album:first-of-type {
       margin-bottom: 4rem;
     }
