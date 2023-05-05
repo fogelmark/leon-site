@@ -15,7 +15,9 @@
 }
 
 $cream-color: #f6e7c6;
-h3, p {
+
+h3,
+p {
   color: $cream-color;
 }
 
@@ -55,11 +57,13 @@ video {
   align-items: center;
 }
 
-.header { // LEON LOGO
+.header {
+  // LEON LOGO
   position: relative;
   color: #f6e7c6;
   text-shadow: 1px 1px 8px #00000093;
   letter-spacing: 2rem;
+
   img {
     height: 70%;
     width: 70%;
@@ -70,44 +74,54 @@ video {
   @include flex(column, center, center);
   position: relative;
   gap: 1rem;
+
   .heading-3 {
     color: $cream-color;
     letter-spacing: 2px;
   }
+
   .heading-3.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0)
   }
+
   .image {
     position: relative;
     width: 40%;
   }
+
   .heading {
     margin-top: 1rem;
   }
+
   .records-container {
     @include flex(column, center, center);
-    width: 40%;
+    // width: 40%;
     // margin-bottom: 6rem;
     text-align: center;
+
     // .heading-3 {
     //   font-size: 1rem;
     // }
     .album:first-of-type {
       margin-bottom: 4rem;
     }
+
     .album {
       margin-top: 1rem;
     }
+
     .image {
       width: 100%;
     }
   }
+
   @include for-mobile {
     .records-container {
       width: 90%;
     }
+
     .image {
       width: 90%;
     }
@@ -135,13 +149,16 @@ a {
 .buttons {
   position: relative;
   @include flex(row, space-between, center);
-  width: 40%;
-  margin: 3rem 0 3rem 0;
+  width: 100%;
+  margin: 3rem 0 2rem 0;
+
   @include for-mobile {
     margin: 0;
   }
+
   a {
     padding: .5rem 0;
+
     border: 2px solid $cream-color;
     background: none;
     color: $cream-color;
@@ -152,6 +169,7 @@ a {
     letter-spacing: 2px;
     text-align: center;
   }
+
   a:hover {
     background: url(./images/leon_gloomy.jpeg);
   }
@@ -161,11 +179,14 @@ a {
   .buttons {
     @include flex(column, center, center);
     gap: 1rem;
-    width: 90%;
+    width: 100%;
+    margin-top: 1rem;
   }
+
   .button-primary {
     min-width: 100%;
   }
+
   video {
     display: none;
   }
@@ -186,6 +207,7 @@ a:focus {
   font-size: 2rem;
   margin-top: 2rem;
   padding: 1rem;
+
   .fa-brands {
     display: grid;
     place-items: center;
@@ -197,11 +219,13 @@ a:focus {
     transition: 1s;
     transform: translateX(-80%);
   }
+
   .fa-brands.show {
     opacity: 1;
     filter: blur(0);
     transform: translateX(0)
   }
+
   .fa-brands:hover {
     transition: ease-in-out 0s;
     transition-delay: 0ms;
@@ -216,32 +240,41 @@ a:focus {
   padding: 1rem;
   margin-bottom: 2rem;
   border-bottom: 1px solid #f6e7c629;
+
   @include for-mobile {
     width: 90%;
     padding: 0;
     gap: 1rem;
   }
+
   h3 {
     margin: 0 auto;
   }
+
   .date {
     @include flex(row, space-between, center);
   }
+
   .heading {
     margin-bottom: 4rem;
   }
+
   .button-secondary {
     @include flex(row, center, center);
   }
+
   .tour-small-h {
     font-size: 1.5rem;
   }
+
   .acts {
     margin-bottom: 0;
+
     @include for-mobile {
       width: 70%;
     }
   }
+
   a {
     border: none;
     color: $cream-color;
@@ -249,6 +282,7 @@ a:focus {
     font-size: .8rem;
     padding: .2em .8em;
     border: 1px solid $cream-color;
+
     &:hover {
       background: url(./images/leon_gloomy.jpeg);
     }
@@ -267,8 +301,9 @@ a:focus {
   position: relative;
   @include flex(row, center, center);
   margin-top: 2rem;
+
   iframe {
-  width: 40%;
+    width: 40%;
   }
 }
 
@@ -289,15 +324,19 @@ footer {
 .fa-brands:nth-child(2) {
   transition-delay: 200ms;
 }
+
 .fa-brands:nth-child(3) {
   transition-delay: 400ms;
 }
+
 .fa-brands:nth-child(4) {
   transition-delay: 600ms;
 }
+
 .fa-brands:nth-child(5) {
   transition-delay: 800ms;
 }
+
 .fa-brands:nth-child(6) {
   transition-delay: 1000ms;
 }

@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;700&display=swap");
-h3, p {
+h3,
+p {
   color: #f6e7c6;
 }
 
@@ -80,7 +81,6 @@ video {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 40%;
   text-align: center;
 }
 .wrapper .records-container .album:first-of-type {
@@ -125,8 +125,8 @@ a {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 40%;
-  margin: 3rem 0 3rem 0;
+  width: 100%;
+  margin: 3rem 0 2rem 0;
 }
 @media (max-width: 900px) {
   .buttons {
@@ -156,7 +156,8 @@ a {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    width: 90%;
+    width: 100%;
+    margin-top: 1rem;
   }
   .button-primary {
     min-width: 100%;
